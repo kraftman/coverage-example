@@ -1,6 +1,6 @@
 'use strict'
 
-const homeHandler = (name = 'Unknown') => {
+const homeHandler = (name) => {
   return `Hi ${name}`
 }
 

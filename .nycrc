@@ -10,6 +10,7 @@
     "lcov"
   ],
   "exclude": [
-    "coverage/*"
+    "coverage/*",
+    "src/**/*.spec.js"
   ]
 }

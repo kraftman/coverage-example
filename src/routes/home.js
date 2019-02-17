@@ -1,6 +1,6 @@
 'use strict';
 
-const homeHandler = require('../../bl/home-handler.js');
+const homeHandler = require('../bl/home-handler.js');
 
 const opts = {
   schema: {

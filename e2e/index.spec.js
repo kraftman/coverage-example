@@ -2,7 +2,7 @@
 const chai = require('chai');
 chai.should();
 
-const { fastify } = require('../../src/fastify/index.js');
+const { fastify } = require('../src/index.js');
 
 describe('e2e tests for fastify server', () => {
   it('should return the name', async () => {
