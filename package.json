@@ -10,13 +10,13 @@
     "start": "node src/fastify/index.js",
     "dev": "nodemon src/fastify/index.js",
     "start-debug": "node --inspect src/fastify/index.js",
-    "precommit": "lint-staged",
+    "precommit": "lint-staged && yarn unit",
     "unit": "mocha ./src/**/*.spec.js",
     "unit-debug": "mocha --inspect-brk ./src/unit/**/*.spec.js",
     "e2e": "mocha ./e2e/**/*.spec.js",
     "e2e-debug": "mocha --inspect-brk ./e2e/**/*.spec.js",
     "test": "mocha ./{src,e2e}/**/*.spec.js",
-    "test-cov": "nyc mocha ./{src,e2e}/**/*.spec.js",
+    "test-cov": "nyc mocha --exit ./{src,e2e}/**/*.spec.js",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "lint-staged": {
@@ -26,10 +26,13 @@
     ]
   },
   "dependencies": {
+    "async-redis": "^1.1.7",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "fastify": "^1.14.1",
-    "morgan": "^1.9.1"
+    "ioredis": "^4.6.2",
+    "morgan": "^1.9.1",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
     "chai": "4.2.0",
