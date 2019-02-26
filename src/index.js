@@ -3,7 +3,7 @@
 const fastify = require('fastify')({
   logger: true,
 });
-const { homeRouter } = require('./routes/home.js');
+const { homeRouter } = require('./routes/create-burger.js');
 
 fastify.register(homeRouter)
 

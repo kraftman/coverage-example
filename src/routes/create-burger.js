@@ -5,7 +5,6 @@ const redis = new Redis();
 const uuidv4 = require('uuid/v4')
 
 const homeRouter = async (fastify) => {
-
   fastify.post('/burger', async (req, res) => {
     const burger = req.body;
     const burgerData = {
@@ -22,7 +21,6 @@ const homeRouter = async (fastify) => {
     .code(200)
     .header('Content-Type', 'application/json; charset=utf-8')
     .send({ hello: 'world' })
-
   })
 }
 
